@@ -126,7 +126,7 @@ public class Serviciu_Cabinet extends Cabinet_Medical {
 
         Pacienti_Tratati pacient4 = new Pacienti_Tratati("Inat", "Filis", "Scolioza", "Mihai");
 
-        Pacienti_Tratati cat = new Pacienti_Tratati("Osman", "Ozal", "Epilepsie", "Andrei");
+        Pacienti_Tratati pacient5 = new Pacienti_Tratati("Osman", "Ozal", "Epilepsie", "Andrei");
 
         List<Pacienti_Tratati> pacienti_tratati = new ArrayList<>();
 
@@ -138,7 +138,7 @@ public class Serviciu_Cabinet extends Cabinet_Medical {
 
         pacienti_tratati.add(pacient4);
 
-        pacienti_tratati.add(cat);
+        pacienti_tratati.add(pacient5);
 
 
 //        Pacienti actuali
@@ -163,7 +163,7 @@ public class Serviciu_Cabinet extends Cabinet_Medical {
 
         pacienti_actuali.add(pacient_4);
 
-        pacienti_actuali.add(dog);
+        pacienti_actuali.add(pacient_5);
 
 //        Medicamentele pe care le putem oferi
 
