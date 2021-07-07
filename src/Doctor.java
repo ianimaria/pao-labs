@@ -1,56 +1,49 @@
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class Doctor {
+public class Doctor extends Persoana {
 
-    private String nume_doctor;
-    private String prenume_doctor;
-    private List<Programare> programari_curente = new ArrayList<>();
+    private double salariu;
+    private Pacient[] pacienti;
+    private Programare[] programari;
+//   private List<Pacient> pacienti = new ArrayList<>();
+//    private List<Programare> programari = new ArrayList<>();
+
 
     public Doctor() {
-        this.nume_doctor = "";
-        this.prenume_doctor = "";
-        this.programari_curente = null;
+
+    }
+    public Doctor(String nume, String prenume, String cnp, int varsta, String nrTelefon, double salariu,
+            Pacient[] pacienti, Programare[] programari) {
+        super(nume, prenume, cnp, varsta, nrTelefon);
+        this.salariu = salariu;
+        this.pacienti = pacienti;
+        this.programari = programari;
     }
 
-    public Doctor(String nume_doctor, String prenume_doctor) {
-        this.nume_doctor = nume_doctor;
-        this.prenume_doctor = prenume_doctor;
+    public void setSalariu(double salariu) {
+        this.salariu = salariu;
     }
 
-    public void adauga_programare(Programare programare) {
-        programari_curente.add(programare);
-//        System.out.println("Doctorul " + this.nume_doctor + " " + this.prenume_doctor + " are o noua programare: ");
-//        System.out.println(this.programari_curente);
+    public double getSalariu() {
+        return salariu;
     }
 
-    public Doctor(String nume_doctor, String prenume_doctor, List<Programare> programari_curente) {
-        this.nume_doctor = nume_doctor;
-        this.prenume_doctor = prenume_doctor;
-        this.programari_curente = programari_curente;
+    public void setPacienti(Pacient[] pacienti) {
+        this.pacienti = pacienti;
     }
 
-    public String getNume_doctor() {
-        return nume_doctor;
+    public Pacient[] getPacienti() {
+        return pacienti;
     }
 
-    public void setNume_doctor(String nume_doctor) {
-        this.nume_doctor = nume_doctor;
+    public void setProgramari(Programare[] programari) {
+        this.programari = programari;
     }
 
-    public String getPrenume_doctor() {
-        return prenume_doctor;
+    public Programare[] getProgramari() {
+        return programari;
     }
 
-    public void setPrenume_doctor(String prenume_doctor) {
-        this.prenume_doctor = prenume_doctor;
-    }
 
-    public List<Programare> getProgramari_curente() {
-        return programari_curente;
-    }
-
-    public void setProgramari_curente(List<Programare> programari_curente) {
-        this.programari_curente = programari_curente;
-    }
 }

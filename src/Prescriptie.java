@@ -1,42 +1,71 @@
 public class Prescriptie {
 
-    private String denumire_prescriptie;
-    private String prospect;
-    private String afectiune;
+    private int nrPrescriptie;
+    private String cnpPacient;
+    private String numeDoctor;
+    private String reteta;
+    private double pret;
 
     public Prescriptie() {
-        this.denumire_prescriptie = "";
-        this.prospect = "";
-        this.afectiune = "";
+
     }
 
-    public Prescriptie(String denumire_prescriptie, String prospect, String afectiune) {
-        this.denumire_prescriptie = denumire_prescriptie;
-        this.prospect = prospect;
-        this.afectiune = afectiune;
+    public Prescriptie(int nrPrescriptie, String cnpPacient, String numeDoctor, String reteta, double pret) {
+        this.nrPrescriptie = nrPrescriptie;
+        this.cnpPacient = cnpPacient;
+        this.numeDoctor = numeDoctor;
+        this.reteta = reteta;
+        this.pret = pret;
     }
 
-    public void setDenumire_prescriptie(String denumire_prescriptie) {
-        this.denumire_prescriptie = denumire_prescriptie;
+    public void setNrPrescriptie(int nrPrescriptie) {
+        this.nrPrescriptie = nrPrescriptie;
     }
 
-    public void setProspect(String prospect) {
-        this.prospect = prospect;
+    public int getNrPrescriptie() {
+        return nrPrescriptie;
     }
 
-    public void setAfectiune(String afectiune) {
-        this.afectiune = afectiune;
+    public void setCnpPacient(String cnpPacient) {
+        this.cnpPacient = cnpPacient;
     }
 
-    public String getDenumire_prescriptie() {
-        return denumire_prescriptie;
+    public String getCnpPacient() {
+        return cnpPacient;
     }
 
-    public String getProspect() {
-        return prospect;
+    public void setNumeDoctor(String numeDoctor) {
+        this.numeDoctor = numeDoctor;
     }
 
-    public String getAfectiune() {
-        return afectiune;
+    public String getNumeDoctor() {
+        return numeDoctor;
+    }
+
+    public void setReteta(String reteta) {
+        this.reteta = reteta;
+    }
+
+    public String getReteta() {
+        return reteta;
+    }
+
+    public void setPret(double pret) {
+        this.pret = pret;
+    }
+
+    public double getPret() {
+        return pret;
+    }
+
+    @Override
+    public String toString() {
+        return "Prescriptie{" +
+                "nrPrescriptie=" + nrPrescriptie +
+                ", cnpPacient='" + cnpPacient + '\'' +
+                ", numeDoctor='" + numeDoctor + '\'' +
+                ", reteta='" + reteta + '\'' +
+                ", pret=" + pret +
+                '}';
     }
 }
